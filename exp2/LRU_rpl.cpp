@@ -64,7 +64,6 @@ int main(){
     }
 
     diseffect++;
-    cout<<diseffect<<" "<<i<<endl;
      while(size>=pp) {//full condition, use LRU to delete.
       out=end->former;
       out->former->next=end;
