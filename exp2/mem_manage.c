@@ -357,7 +357,7 @@ if (wf == NULL) return -1;
 int allocate(struct free_block_type *pre,struct free_block_type *allocate_free_block,struct allocated_block *ab){
 	ab->start_addr = allocate_free_block->start_addr;
 	
-        if(allocate_free_block->size < MIN_SLICE) {
+        if((allocate_free_block->size-ab->size) < MIN_SLICE) {
 	  ab->size = allocate_free_block->size;
           if(pre == NULL)  free_block= allocate_free_block->next;
 	  else pre->next = allocate_free_block->next;
