@@ -1,0 +1,12 @@
+.*
+!.gitignore
+exp1/*
+exp2/*
+!exp1/*.c
+!exp2/*.c
+!exp2/*.cpp
+exp3/*
+!exp3/boot*/
+exp3/boot*/*
+!exp3/boot*/*.s
+!exp3/boot*/Makefile
